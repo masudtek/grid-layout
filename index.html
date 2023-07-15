@@ -4,8 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>grid layout</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(4,1fr);
+            background-color: bisque;
+            height: 100vh;
+            gap: 5px;
+
+        }
+        .one{
+            background-color: lightslategray;
+            grid-column: 1/5;
+        }
+        .two{
+            background-color: lightblue;
+            grid-row: 2/4;
+        }
+        .three{
+            background-color: orange;
+            grid-column: 2/5;
+        }
+        .four{
+            background-color: green;
+            grid-column: 2/3;
+        }
+        .five{
+            background-color: green;
+            grid-column: 3/4;
+        }
+        .six{
+            background-color: green;
+            grid-column: 4/5;
+
+        }
+        .footer{
+            background-color: red;
+            grid-column:1/5;
+        }
+        .grid-container, .items{
+            text-align: center;
+            padding: 20px;
+        }
+        @media screen and (max-width: 576px) {
+            .items{
+                grid-column: 1/5;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+<div class="grid-container">
+    <div class=" items one">Header</div>
+    <div class=" items two">Nav</div>
+    <div class=" items three">title</div>
+    <div class=" items four">article-1</div>
+    <div class=" items five">article-2</div>
+    <div class=" items six">article-3</div>
+    <div class=" items footer">footer</div>
+</div>
 </body>
 </html>
